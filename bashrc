@@ -125,3 +125,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 alias nurik='neofetch'
 
+# Заменяем процесс терминала сразу на tmux (выход будет с 1 раза)
+if [ -z "$TMUX" ]; then
+    exec tmux new-session -A -s main
+fi
+
