@@ -48,9 +48,13 @@ gsettings set org.gnome.desktop.interface icon-theme   'Yaru-purple'
 echo "⌨️  Добавляем русскую раскладку..."
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'ru')]"
 
-echo "⌨️  Прописываем горячие клавиши..."
-gsettings set org.gnome.desktop.wm.keybindings show-desktop          "['<Super>z']"
-gsettings set org.gnome.desktop.wm.keybindings activate-window-menu  "['<Super>q']"
+# Горячие клавиши лежат в keybindings.dconf одним дампом (окна, тайлинг,
+# переключение рабочих столов, media-keys). Пути внутри файла — относительно
+# /org/gnome/, поэтому грузим именно от этого корня.
+if [ -f "keybindings.dconf" ]; then
+    echo "⌨️  Прописываем горячие клавиши..."
+    dconf load /org/gnome/ < keybindings.dconf
+fi
 
 # 4. Расширения GNOME Shell (в apt их нет — тянем с extensions.gnome.org)
 SHELL_VERSION="$(gnome-shell --version | grep -oP '\d+' | head -1)"

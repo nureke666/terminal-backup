@@ -1,5 +1,6 @@
 [legacy/keybindings]
 select-all='<Primary><Shift>a'
+toggle-menubar='<Primary>p'
 
 [legacy/profiles:]
 default='76d93276-1d73-4d69-b111-5a1108b2cd38'

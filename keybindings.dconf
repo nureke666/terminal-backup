@@ -1,0 +1,20 @@
+[desktop/wm/keybindings]
+activate-window-menu=['<Super>q']
+maximize=['<Alt>w']
+show-desktop=['<Super>z']
+switch-to-workspace-left=['<Alt>1']
+switch-to-workspace-right=['<Alt>2']
+toggle-maximized=['<Alt>F10']
+unmaximize=['<Alt>s']
+
+[mutter/keybindings]
+toggle-tiled-left=['<Alt>a']
+toggle-tiled-right=['<Alt>d']
+
+[settings-daemon/plugins/media-keys]
+home=['<Super>e']
+www=['<Super>b']
+
+[shell/keybindings]
+open-application-menu=@as []
+
