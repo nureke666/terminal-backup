@@ -2,8 +2,8 @@
 activate-window-menu=['<Super>q']
 maximize=['<Alt>w']
 show-desktop=['<Super>z']
-switch-to-workspace-left=['<Alt>1']
-switch-to-workspace-right=['<Alt>2']
+switch-to-workspace-left=['<Alt>q']
+switch-to-workspace-right=['<Alt>e']
 toggle-maximized=['<Alt>F10']
 unmaximize=['<Alt>s']
 
